@@ -1690,45 +1690,26 @@ body.nav-active .expanded-links a {
     }
 }
 
-/* --------------------------------------------------
-   TECH PARTNERS SECTION
-   -------------------------------------------------- */
-.tech-partners-section {
-    background: var(--color-bg-light);
-    border-top: 1px solid var(--color-border-light);
-    padding: 6rem 0 5rem 0;
-    text-align: center;
+/* Font Helper Classes */
+.font-sans {
+    font-family: var(--font-sans) !important;
 }
 
-.tech-partners-grid {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4.5rem;
-    flex-wrap: wrap;
+.font-serif {
+    font-family: var(--font-serif) !important;
 }
 
-.tech-partners-grid span {
-    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 1.55rem;
-    font-weight: 800;
-    color: var(--color-text-dark);
-    opacity: 0.55;
-    transition: opacity 0.3s ease;
+.font-mono {
+    font-family: var(--font-mono) !important;
 }
 
-.tech-partners-grid span:hover {
-    opacity: 0.95;
+/* Comparison Table Typography Fix */
+.comparison-row {
+    font-family: var(--font-sans) !important;
 }
-
-@media (max-width: 768px) {
-    .tech-partners-section {
-        padding: 4.5rem 0;
-    }
-    .tech-partners-grid {
-        gap: 2.5rem 3rem;
-    }
-    .tech-partners-grid span {
-        font-size: 1.25rem;
-    }
+.comparison-row .col-left {
+    font-family: var(--font-sans) !important;
+}
+.comparison-row .col-right {
+    font-family: var(--font-sans) !important;
 }
