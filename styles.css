@@ -1652,8 +1652,9 @@ body.nav-active .expanded-links a {
 .faq-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2.5rem 4rem;
+    gap: 0 4rem;
     margin-top: 3rem;
+    max-width: 1000px;
 }
 
 .faq-item {
@@ -1723,6 +1724,9 @@ body.nav-active .expanded-links a {
 }
 
 @media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
     .faq-item {
         padding: 1.2rem 0;
     }
