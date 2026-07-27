@@ -9,8 +9,8 @@
     --color-bg-dark: #121211;       /* OLED Warm Black */
     --color-text-light: #FAF9F6;
     
-    --color-accent: #4F5E52;        /* Sage / Muted Olive */
-    --color-accent-hover: #3b473d;
+    --color-accent: #ef4136;        /* Bright Red Brand Accent */
+    --color-accent-hover: #d6392f;
     --color-border-light: rgba(26, 25, 23, 0.08);
     --color-border-dark: rgba(250, 249, 246, 0.1);
     
@@ -22,6 +22,16 @@
     /* Animation Easing */
     --ease-editorial: cubic-bezier(0.16, 1, 0.3, 1);
     --duration-editorial: 800ms;
+}
+
+/* Custom Text Selection Highlight */
+::selection {
+    background-color: rgba(239, 65, 54, 0.15);
+    color: var(--color-text-dark);
+}
+::-moz-selection {
+    background-color: rgba(239, 65, 54, 0.15);
+    color: var(--color-text-dark);
 }
 
 * {
@@ -1462,17 +1472,71 @@ body.nav-active .expanded-links a {
     }
 }
 
-.project-tag {
-    display: inline-block;
+/* --------------------------------------------------
+   PROJECT METRICS BADGES
+   -------------------------------------------------- */
+.project-metrics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.metric-badge {
     font-family: var(--font-mono);
     font-size: 0.65rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: #a7432d;
-    background: rgba(167, 67, 45, 0.08);
-    padding: 0.3rem 0.8rem;
-    border-radius: 100px;
-    letter-spacing: 0.05em;
-    align-self: flex-start;
-    margin-bottom: 0.8rem;
+    color: var(--color-accent);
+    background: rgba(239, 65, 54, 0.05);
+    border: 1px solid rgba(239, 65, 54, 0.15);
+    padding: 0.25rem 0.55rem;
+    border-radius: 2px;
+    letter-spacing: 0.02em;
+}
+
+/* --------------------------------------------------
+   ENGINEERING STANDARDS SECTION
+   -------------------------------------------------- */
+.standards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.standard-card {
+    border-left: 2px solid var(--color-accent);
+    padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.standard-title {
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--color-text-light);
+    letter-spacing: -0.01em;
+}
+
+.standard-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(250, 249, 246, 0.7);
+}
+
+@media (max-width: 1024px) {
+    .standards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .standards-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 }
