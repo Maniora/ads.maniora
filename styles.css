@@ -1621,28 +1621,28 @@ body.nav-active .expanded-links a {
 
 /* Individual logo adjustments for visual balance & clean backgrounds */
 .logo-marquee-group img.logo-4kmedia {
-    height: 54px; /* Scaled up to be prominent */
-    filter: grayscale(100%) contrast(1.1);
+    height: 48px; /* Perfectly balanced horizontal logo */
+    filter: grayscale(100%) contrast(1.15);
     opacity: 0.7;
 }
 
 .logo-marquee-group img.logo-kahani {
-    height: 46px;
+    height: 38px; /* Made smaller to match vertical text height of others */
     opacity: 0.65;
 }
 
 .logo-marquee-group img.logo-pixelfable {
-    height: 38px;
+    height: 72px; /* Set larger because inner content has high padding/small scale */
     filter: invert(1) grayscale(100%) contrast(1.2); /* Invert so gray background turns white, making multiply blend perfectly */
     mix-blend-mode: multiply;
 }
 
 .logo-marquee-group img.logo-pixelfable:hover {
-    filter: invert(1) grayscale(0%) !important;
+    filter: grayscale(0%) !important;
 }
 
 .logo-marquee-group img.logo-nwellness {
-    height: 38px;
+    height: 44px; /* Balanced tall vertical aspect ratio */
     filter: brightness(0.25) grayscale(100%); /* Force extremely faint paths to draw dark Espresso color */
     opacity: 0.75;
 }
@@ -1661,9 +1661,15 @@ body.nav-active .expanded-links a {
         height: 28px;
     }
     .logo-marquee-group img.logo-4kmedia {
-        height: 36px;
+        height: 32px;
     }
     .logo-marquee-group img.logo-kahani {
-        height: 32px;
+        height: 26px;
+    }
+    .logo-marquee-group img.logo-pixelfable {
+        height: 52px;
+    }
+    .logo-marquee-group img.logo-nwellness {
+        height: 30px;
     }
 }
