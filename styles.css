@@ -1604,121 +1604,86 @@ body.nav-active .expanded-links a {
     }
 }
 
-/* Card containers for logos */
-.marquee-logo-card {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1.8rem;
-    background: #ffffff;
-    border: 1px solid rgba(26, 25, 23, 0.07);
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(26, 25, 23, 0.015);
-    height: 76px; /* Uniform height for all cards! */
-    min-width: 180px;
-    transition: all 0.3s ease;
-    flex-shrink: 0;
-}
-
-.logo-marquee-group {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 2.5rem; /* Gap between cards */
-    min-width: 100%;
-    animation: scroll-marquee 30s linear infinite;
-}
-
 .logo-4kmedia-wrap {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
-}
-
-.logo-4kmedia-wrap .text-4kmedia {
-    font-family: var(--font-sans);
-    font-size: 1.25rem;
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    color: var(--color-text-dark);
-    transition: color 0.3s ease;
-}
-
-.logo-marquee-group img {
-    height: 38px; /* Uniform inner image height! */
-    width: auto;
-    max-width: 160px;
-    object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.55;
+    opacity: 0.65;
     transition: all 0.3s ease;
 }
 
-/* Individual logo adjustments for visual balance inside cards */
-.logo-marquee-group img.logo-4kmedia {
-    height: 32px; /* Smaller icon since text is next to it */
+.logo-4kmedia-wrap:hover {
+    opacity: 0.95;
+}
+
+.logo-4kmedia-wrap .text-4kmedia {
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+}
+
+.logo-marquee-group img {
+    height: 54px;
+    width: auto;
+    max-width: 190px;
+    object-fit: contain;
     filter: grayscale(100%);
+    opacity: 0.65;
+    transition: all 0.3s ease;
 }
 
-.logo-marquee-group img.logo-kahani {
-    height: 34px;
-}
-
-.logo-marquee-group img.logo-pixelfable {
-    height: 52px; /* Inner content is tiny, so box height is larger */
-    filter: invert(1) grayscale(100%) contrast(1.15);
-    mix-blend-mode: multiply;
-}
-
-.logo-marquee-group img.logo-nwellness {
-    height: 38px;
-    filter: grayscale(100%);
-}
-
-/* Hover effects applied to cards */
-.marquee-logo-card:hover {
-    border-color: rgba(239, 65, 54, 0.25);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(26, 25, 23, 0.04);
-}
-
-.marquee-logo-card:hover img {
+.logo-marquee-group img:hover {
     filter: grayscale(0%) !important;
     opacity: 0.95 !important;
 }
 
-.marquee-logo-card:hover img.logo-pixelfable {
+/* Individual logo adjustments for visual balance & clean backgrounds */
+.logo-marquee-group img.logo-kahani {
+    height: 56px;
+    opacity: 0.7;
+}
+
+.logo-marquee-group img.logo-pixelfable {
+    height: 110px;
+    filter: invert(1) grayscale(100%) contrast(1.2);
+    mix-blend-mode: multiply;
+}
+
+.logo-marquee-group img.logo-pixelfable:hover {
     filter: invert(1) grayscale(0%) !important;
 }
 
-.marquee-logo-card:hover .text-4kmedia {
-    color: var(--color-accent);
+.logo-marquee-group img.logo-nwellness {
+    height: 64px;
+    filter: grayscale(100%);
+    opacity: 0.75;
+}
+
+.logo-marquee-group img.logo-nwellness:hover {
+    filter: grayscale(0%) !important;
 }
 
 @media (max-width: 768px) {
-    .marquee-logo-card {
-        height: 60px;
-        min-width: 140px;
-        padding: 0.4rem 1.2rem;
-        border-radius: 8px;
+    .logo-marquee-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
     }
     .logo-marquee-group img {
-        height: 28px;
-    }
-    .logo-marquee-group img.logo-4kmedia {
-        height: 24px;
+        height: 38px;
     }
     .logo-marquee-group img.logo-kahani {
-        height: 26px;
+        height: 38px;
     }
     .logo-marquee-group img.logo-pixelfable {
-        height: 40px;
+        height: 76px;
     }
     .logo-marquee-group img.logo-nwellness {
-        height: 28px;
+        height: 44px;
     }
     .logo-4kmedia-wrap .text-4kmedia {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
 }
