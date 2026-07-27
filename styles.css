@@ -233,10 +233,11 @@ section {
 }
 
 .nav-logo-img {
-    height: 30px;
+    height: 22px;
     width: auto;
     display: block;
     object-fit: contain;
+    mix-blend-mode: multiply;
 }
 
 .nav-links-desktop {
