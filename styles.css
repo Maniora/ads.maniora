@@ -1609,6 +1609,7 @@ body.nav-active .expanded-links a {
     align-items: center;
     opacity: 0.65;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .logo-4kmedia-wrap:hover {
@@ -1632,6 +1633,7 @@ body.nav-active .expanded-links a {
     filter: grayscale(100%);
     opacity: 0.65;
     transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
 .logo-marquee-group img:hover {
