@@ -227,17 +227,16 @@ section {
 }
 
 .brand-logo {
-    font-family: var(--font-sans);
-    font-weight: 700;
-    font-size: 1.4rem;
     text-decoration: none;
-    color: var(--color-text-dark);
-    letter-spacing: -0.04em;
-    padding-bottom: 1px; /* Optical baseline shift */
+    display: flex;
+    align-items: center;
 }
 
-.brand-logo span {
-    color: var(--color-accent);
+.nav-logo-img {
+    height: 30px;
+    width: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .nav-links-desktop {
@@ -1158,15 +1157,17 @@ body.nav-active .expanded-links a {
     margin-bottom: 6rem;
 }
 
-.footer-brand .logo {
-    font-family: var(--font-sans);
-    font-weight: 700;
-    font-size: 1.8rem;
-    letter-spacing: -0.03em;
+.footer-logo-link {
+    display: inline-block;
+    text-decoration: none;
 }
 
-.footer-brand .logo span {
-    color: var(--color-accent);
+.footer-logo-img {
+    height: 36px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    opacity: 0.9;
 }
 
 .footer-tagline {
@@ -1649,10 +1650,9 @@ body.nav-active .expanded-links a {
 /* FAQ Accordion Styling */
 .faq-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 0;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 4rem;
     margin-top: 3rem;
-    max-width: 860px;
 }
 
 .faq-item {
