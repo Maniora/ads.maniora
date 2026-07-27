@@ -233,7 +233,7 @@ section {
 }
 
 .nav-logo-img {
-    height: 22px;
+    height: 30px;
     width: auto;
     display: block;
     object-fit: contain;
@@ -923,8 +923,7 @@ body.nav-active .expanded-links a {
 }
 
 .form-layout {
-    max-width: 1120px;
-    margin: 0 auto;
+    width: 100%;
 }
 
 .form-grid-columns {
