@@ -1540,3 +1540,10 @@ body.nav-active .expanded-links a {
         gap: 2rem;
     }
 }
+
+@media (max-width: 768px) {
+    .faq-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2.5rem !important;
+    }
+}
