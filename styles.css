@@ -1561,3 +1561,71 @@ body.nav-active .expanded-links a {
         gap: 2rem !important;
     }
 }
+
+/* --------------------------------------------------
+   LOGO MARQUEE
+   -------------------------------------------------- */
+.logo-marquee-container {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    flex-grow: 1;
+    overflow: hidden;
+    width: 100%;
+}
+
+.logo-marquee-track {
+    overflow: hidden;
+    display: flex;
+    user-select: none;
+    gap: 4rem;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+}
+
+.logo-marquee-group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 4rem;
+    min-width: 100%;
+    animation: scroll-marquee 30s linear infinite;
+}
+
+@keyframes scroll-marquee {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.logo-marquee-group img {
+    height: 38px;
+    width: auto;
+    max-width: 150px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.55;
+    mix-blend-mode: multiply;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+.logo-marquee-group img:hover {
+    filter: grayscale(0%);
+    opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+    .logo-marquee-container {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+    .logo-marquee-group img {
+        height: 28px;
+    }
+}
