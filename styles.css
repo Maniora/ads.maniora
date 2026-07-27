@@ -922,7 +922,7 @@ body.nav-active .expanded-links a {
     display: grid;
     grid-template-columns: 1fr 1.6fr;
     gap: 6rem;
-    align-items: start;
+    align-items: center;
 }
 
 .why-maniora-left {
@@ -943,11 +943,11 @@ body.nav-active .expanded-links a {
     align-items: flex-start;
     gap: 1.2rem;
     padding: 1.4rem 0;
-    border-bottom: 1px solid rgba(250, 249, 246, 0.07);
+    border-bottom: 1px solid var(--color-border-light);
 }
 
 .why-item:first-child {
-    border-top: 1px solid rgba(250, 249, 246, 0.07);
+    border-top: 1px solid var(--color-border-light);
 }
 
 .why-check {
@@ -965,7 +965,7 @@ body.nav-active .expanded-links a {
     font-family: var(--font-sans);
     font-size: 1rem;
     font-weight: 600;
-    color: var(--color-text-light);
+    color: var(--color-text-dark);
     letter-spacing: -0.01em;
     margin-bottom: 0.3rem;
 }
@@ -974,7 +974,7 @@ body.nav-active .expanded-links a {
     font-family: var(--font-sans);
     font-size: 0.9rem;
     line-height: 1.5;
-    color: rgba(250, 249, 246, 0.5);
+    color: rgba(26, 25, 23, 0.55);
     margin: 0;
 }
 
