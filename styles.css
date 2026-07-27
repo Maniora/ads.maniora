@@ -1689,27 +1689,3 @@ body.nav-active .expanded-links a {
         font-size: 1.25rem;
     }
 }
-
-/* Font Helper Classes */
-.font-sans {
-    font-family: var(--font-sans) !important;
-}
-
-.font-serif {
-    font-family: var(--font-serif) !important;
-}
-
-.font-mono {
-    font-family: var(--font-mono) !important;
-}
-
-/* Comparison Table Typography Fix */
-.comparison-row {
-    font-family: var(--font-sans) !important;
-}
-.comparison-row .col-left {
-    font-family: var(--font-sans) !important;
-}
-.comparison-row .col-right {
-    font-family: var(--font-sans) !important;
-}
