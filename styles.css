@@ -1549,9 +1549,15 @@ body.nav-active .expanded-links a {
 }
 
 @media (max-width: 768px) {
-    .hero-trust-bar {
-        grid-template-columns: 1fr !important;
+    .hero-brand-bar {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
         gap: 1.5rem !important;
-        margin-top: 3rem !important;
+        margin-top: 3.5rem !important;
+    }
+    .hero-brand-bar .brand-logos {
+        justify-content: center !important;
+        gap: 2rem !important;
     }
 }
