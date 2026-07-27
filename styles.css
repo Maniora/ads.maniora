@@ -1604,13 +1604,37 @@ body.nav-active .expanded-links a {
     }
 }
 
+.logo-4kmedia-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    opacity: 0.65;
+    transition: all 0.3s ease;
+}
+
+.logo-4kmedia-wrap:hover {
+    opacity: 0.95;
+}
+
+.logo-4kmedia-wrap:hover img.logo-4kmedia {
+    filter: grayscale(0%) contrast(1) !important;
+}
+
+.logo-4kmedia-wrap .text-4kmedia {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    color: var(--color-text-dark);
+}
+
 .logo-marquee-group img {
-    height: 40px;
+    height: 48px;
     width: auto;
-    max-width: 160px;
+    max-width: 180px;
     object-fit: contain;
     filter: grayscale(100%);
-    opacity: 0.6;
+    opacity: 0.65;
     transition: all 0.3s ease;
 }
 
@@ -1621,34 +1645,33 @@ body.nav-active .expanded-links a {
 
 /* Individual logo adjustments for visual balance & clean backgrounds */
 .logo-marquee-group img.logo-4kmedia {
-    height: 48px; /* Perfectly balanced horizontal logo */
-    filter: grayscale(100%) contrast(1.15);
-    opacity: 0.7;
+    height: 52px;
+    filter: grayscale(100%);
 }
 
 .logo-marquee-group img.logo-kahani {
-    height: 38px; /* Made smaller to match vertical text height of others */
-    opacity: 0.65;
+    height: 48px;
+    opacity: 0.7;
 }
 
 .logo-marquee-group img.logo-pixelfable {
-    height: 72px; /* Set larger because inner content has high padding/small scale */
-    filter: invert(1) grayscale(100%) contrast(1.2); /* Invert so gray background turns white, making multiply blend perfectly */
+    height: 96px;
+    filter: invert(1) grayscale(100%) contrast(1.2);
     mix-blend-mode: multiply;
 }
 
 .logo-marquee-group img.logo-pixelfable:hover {
-    filter: grayscale(0%) !important;
+    filter: invert(1) grayscale(0%) !important;
 }
 
 .logo-marquee-group img.logo-nwellness {
-    height: 44px; /* Balanced tall vertical aspect ratio */
-    filter: brightness(0.25) grayscale(100%); /* Force extremely faint paths to draw dark Espresso color */
+    height: 54px;
+    filter: grayscale(100%);
     opacity: 0.75;
 }
 
 .logo-marquee-group img.logo-nwellness:hover {
-    filter: brightness(0.1) grayscale(0%) !important;
+    filter: grayscale(0%) !important;
 }
 
 @media (max-width: 768px) {
@@ -1658,18 +1681,21 @@ body.nav-active .expanded-links a {
         gap: 1rem !important;
     }
     .logo-marquee-group img {
-        height: 28px;
+        height: 34px;
     }
     .logo-marquee-group img.logo-4kmedia {
-        height: 32px;
+        height: 38px;
     }
     .logo-marquee-group img.logo-kahani {
-        height: 26px;
+        height: 34px;
     }
     .logo-marquee-group img.logo-pixelfable {
-        height: 52px;
+        height: 68px;
     }
     .logo-marquee-group img.logo-nwellness {
-        height: 30px;
+        height: 38px;
+    }
+    .logo-4kmedia-wrap .text-4kmedia {
+        font-size: 1.15rem;
     }
 }
