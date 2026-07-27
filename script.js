@@ -60,23 +60,25 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(alignmentForm);
             const name = formData.get('name') || '';
             const email = formData.get('email') || '';
-            const budget = formData.get('budget') || '';
+            const service = formData.get('service') || '';
             const message = formData.get('message') || '';
 
-            // Format budget for display
-            let budgetText = '';
-            if (budget === 'under-30k') budgetText = 'Under ₹30,000 (~$350)';
-            else if (budget === '30k-75k') budgetText = '₹30,000 – ₹75,000 (~$350 – $900)';
-            else if (budget === '75k-2l') budgetText = '₹75,000 – ₹2,00,000 (~$900 – $2,400)';
-            else if (budget === '2l-plus') budgetText = '₹2,00,000+ ($2,400+)';
-            else budgetText = budget || 'Not specified';
+            // Format service for display
+            let serviceText = '';
+            if (service === 'new-website') serviceText = 'New Website';
+            else if (service === 'website-redesign') serviceText = 'Website Redesign';
+            else if (service === 'landing-page') serviceText = 'Landing Page';
+            else if (service === 'ecommerce') serviceText = 'E-commerce';
+            else if (service === 'booking-website') serviceText = 'Booking Website';
+            else if (service === 'something-else') serviceText = 'Something Else';
+            else serviceText = service || 'Not specified';
 
             // Construct WhatsApp message body
             const whatsappMsg = `Hello Maniora Partners,\n\n` +
-                                `I would like to start a conversation. Here are my details:\n\n` +
+                                `I would like to book a strategy call. Here are my details:\n\n` +
                                 `• *Name:* ${name}\n` +
                                 `• *Email:* ${email}\n` +
-                                `• *Estimated Budget:* ${budgetText}\n` +
+                                `• *Service Needed:* ${serviceText}\n` +
                                 `• *Project Goals:* ${message}`;
 
             // Create WhatsApp URL
