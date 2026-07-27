@@ -1689,3 +1689,46 @@ body.nav-active .expanded-links a {
         font-size: 1.25rem;
     }
 }
+
+/* --------------------------------------------------
+   TECH PARTNERS SECTION
+   -------------------------------------------------- */
+.tech-partners-section {
+    background: var(--color-bg-light);
+    border-top: 1px solid var(--color-border-light);
+    padding: 6rem 0 5rem 0;
+    text-align: center;
+}
+
+.tech-partners-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4.5rem;
+    flex-wrap: wrap;
+}
+
+.tech-partners-grid span {
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.55rem;
+    font-weight: 800;
+    color: var(--color-text-dark);
+    opacity: 0.55;
+    transition: opacity 0.3s ease;
+}
+
+.tech-partners-grid span:hover {
+    opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+    .tech-partners-section {
+        padding: 4.5rem 0;
+    }
+    .tech-partners-grid {
+        gap: 2.5rem 3rem;
+    }
+    .tech-partners-grid span {
+        font-size: 1.25rem;
+    }
+}
