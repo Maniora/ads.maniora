@@ -916,6 +916,79 @@ body.nav-active .expanded-links a {
 }
 
 /* --------------------------------------------------
+   SECTION 6.7: WHY MANIORA — TRUST SIGNALS
+   -------------------------------------------------- */
+.why-maniora-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.6fr;
+    gap: 6rem;
+    align-items: start;
+}
+
+.why-maniora-left {
+    position: sticky;
+    top: 7rem;
+}
+
+.why-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.why-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 1.4rem 0;
+    border-bottom: 1px solid rgba(250, 249, 246, 0.07);
+}
+
+.why-item:first-child {
+    border-top: 1px solid rgba(250, 249, 246, 0.07);
+}
+
+.why-check {
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    line-height: 1;
+}
+
+.why-item strong {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+    letter-spacing: -0.01em;
+    margin-bottom: 0.3rem;
+}
+
+.why-item p {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(250, 249, 246, 0.5);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .why-maniora-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .why-maniora-left {
+        position: static;
+    }
+}
+
+/* --------------------------------------------------
    SECTION 7: CONVERSATIONAL QUESTIONNAIRE
    -------------------------------------------------- */
 .form-section {
