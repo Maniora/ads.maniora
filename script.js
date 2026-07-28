@@ -107,10 +107,25 @@ document.addEventListener('DOMContentLoaded', () => {
             if (inputsContainer) inputsContainer.style.display = 'none';
             if (submitBtn) submitBtn.style.display = 'none';
             
-            // Set up fallback button URL
+            // Push Conversion Event to DataLayer (GA4 / Google Ads / GTM)
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'generate_lead',
+                'lead_type': serviceText,
+                'lead_source': 'strategy_form'
+            });
+
+            // Set up fallback button URL & click tracking
             const fallbackBtn = document.getElementById('whatsapp-fallback-btn');
             if (fallbackBtn) {
                 fallbackBtn.href = whatsappUrl;
+                fallbackBtn.addEventListener('click', () => {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({
+                        'event': 'whatsapp_click',
+                        'click_location': 'form_success'
+                    });
+                });
             }
 
             // Show the success panel
