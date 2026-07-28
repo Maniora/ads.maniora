@@ -1,5 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --------------------------------------------------
+    // STICKY NAVBAR SCROLL SHRINK
+    // --------------------------------------------------
+    const navIsland = document.getElementById('nav-island');
+    if (navIsland) {
+        const handleScroll = () => {
+            if (window.scrollY > 60) {
+                navIsland.classList.add('nav-scrolled');
+            } else {
+                navIsland.classList.remove('nav-scrolled');
+            }
+        };
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        handleScroll();
+    }
+
+    // --------------------------------------------------
     // NAVIGATION EXPANSE & HAMBURGER
     // --------------------------------------------------
     const navToggle = document.getElementById('nav-toggle');
