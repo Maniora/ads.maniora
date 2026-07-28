@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://maniora.in/sitemap.xml
+Sitemap: https://web.maniora.in/sitemap.xml
