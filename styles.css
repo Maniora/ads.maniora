@@ -2051,7 +2051,7 @@ body.nav-active .expanded-links a {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    opacity: 0.5;
+    opacity: 0.75;
 }
 
 .comparison-row.header .col-right {
